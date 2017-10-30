@@ -1,7 +1,13 @@
 class Owner
   # code goes here
+ attr_reader :species
+
   @@all = []
 
+  def initialize()
+    @species = human
+  end
+  
   def self.all
     @@all
   end
