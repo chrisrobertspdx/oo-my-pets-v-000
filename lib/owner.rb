@@ -16,33 +16,40 @@ class Owner
 
   def buy_fish
     new_fish = Fish.new(name)
-    pets[:fishes] << new_fish
+    self.pets[:fishes] << new_fish
   end
 
   def buy_cat
     new_cat = Cat.new(name)
-    pets[:cats] << new_cat
+    self.pets[:cats] << new_cat
   end
 
   def buy_dog
     new_dog = Dog.new(name)
-    pets[:dogs] << new_dog
+    self.pets[:dogs] << new_dog
   end
 
   def walk_dogs
-    pets[:dogs].each{|e|
+    self.pets[:dogs].each{|e|
       e.mood = "happy"
     }
 
   def play_with_cats
-    pets[:cats].each{|e|
+    self.pets[:cats].each{|e|
       e.mood = "happy"
     }
   end
 
   def feed_fish
-    pets[:fish].each{|e|
+    self.pets[:fish].each{|e|
       e.mood = "happy"
+    }
+  end
+
+  def sell_pets
+    self.pets.each{|type,pets|
+      pets.each{|pet| pet.mood = "nervous"}
+      type.clear
     }
   end
 
