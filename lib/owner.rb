@@ -18,7 +18,6 @@ class Owner
   def buy_fish(name)
     new_fish = Fish.new(name)
     self.pets[:fishes] << new_fish
-    binding.pry
   end
 
   def buy_cat(name)
@@ -47,6 +46,17 @@ class Owner
     self.pets[:fishes].each{|e|
       e.mood = "happy"
     }
+  end
+
+  def sell_pets
+    self.pets{|type,pets|
+      pets.each{|pet| pet.mood = "nervous"}
+      type.clear
+    }
+  end
+
+  def list_pets
+    "I have #{self.pets[:fishes]} fish, #{self.pets[:dogs]} dog(s), and #{self.pets[:cats]} cat(s)." 
   end
 
   def save
