@@ -7,5 +7,5 @@ class Dog
     @name = name
     @mood = mood
   end
-end
 
+end
