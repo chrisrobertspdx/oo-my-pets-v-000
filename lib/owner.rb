@@ -43,7 +43,7 @@ class Owner
   end
 
   def feed_fish
-    self.pets[:fish].each{|e|
+    self.pets[:fishes].each{|e|
       e.mood = "happy"
     }
   end
