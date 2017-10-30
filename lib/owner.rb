@@ -29,39 +29,6 @@ class Owner
     self.pets[:dogs] << new_dog
   end
 
-  def walk_dogs
-    self.pets[:dogs].each{|e|
-      e.mood = "happy"
-    }
-
-  def play_with_cats
-    self.pets[:cats].each{|e|
-      e.mood = "happy"
-    }
-  end
-
-  def feed_fish
-    self.pets[:fish].each{|e|
-      e.mood = "happy"
-    }
-  end
-
-
-
-  def save
-    @@all << self
-  end
-
-  def self.all
-    @@all
-  end
-
-  def self.reset_all
-    @@all.clear
-  end
-
-  def self.count
-    @@all.size
-  end
+  
 
 end
