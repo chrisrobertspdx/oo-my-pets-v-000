@@ -53,6 +53,12 @@ class Owner
     }
   end
 
+I have 2 fish, 3 dog(s), and 1 cat(s).
+
+  def list_pets
+    puts "I have #{self.pets[:fish].size} fish, #{self.pets[:dogs].size} dog(s) and #{self.pets[:cats].size} cat(s)."
+  end
+
   def save
     @@all << self
   end
