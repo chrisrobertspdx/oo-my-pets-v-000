@@ -17,16 +17,16 @@ class Owner
 
   def buy_fish(name)
     new_fish = Fish.new(name)
-    pets[:fishes] << new_fish
+    self.pets[:fishes] << new_fish
     binding.pry
   end
 
-  def buy_cat
+  def buy_cat(name)
     new_cat = Cat.new(name)
     self.pets[:cats] << new_cat
   end
 
-  def buy_dog
+  def buy_dog(name)
     new_dog = Dog.new(name)
     self.pets[:dogs] << new_dog
   end
